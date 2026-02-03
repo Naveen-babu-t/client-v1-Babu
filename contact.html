@@ -3,166 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Dan Vokey’s Plumbing</title>
-  <meta name="description" content="Call or email Dan Vokey’s Plumbing Services in Kingston, ON. Request a quote (static prototype)." />
+  <title>Contact | Dan Vokey Plumbing</title>
+  <meta name="description" content="Contact page with a static quote request form (Phase 1)." />
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="site-header">
-    <div class="topbar">
-      <div class="container topbar__inner">
-        <div class="topbar__left">
-          <a class="topbar__item" href="tel:6135618075">📞 (613) 561-8075</a>
-          <a class="topbar__item" href="mailto:danvokeyplumbing@gmail.com">✉️ danvokeyplumbing@gmail.com</a>
-        </div>
-        <div class="topbar__right">
-          <a class="btn btn--small btn--ghost" href="#quote">Request a Quote</a>
-        </div>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <div class="topbar__left">
+        <a class="topbar__item" href="tel:6135618075">📞 (613) 561-8075</a>
+        <a class="topbar__item" href="mailto:danvokeyplumbing@gmail.com">✉ danvokeyplumbing@gmail.com</a>
       </div>
-    </div>
-
-    <div class="nav-wrap">
-      <div class="container nav">
-        <a class="brand" href="index.html">
-          <span class="brand__logo" aria-hidden="true">DV</span>
-          <span class="brand__text">
-            <span class="brand__name">Dan Vokey’s Plumbing</span>
-            <span class="brand__sub">Kingston, ON</span>
-          </span>
-        </a>
-
-        <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
-          ☰
-        </button>
-
-        <nav class="nav__links" data-nav>
-          <a class="nav__link" href="index.html">Home</a>
-          <a class="nav__link" href="services.html">Services</a>
-          <a class="nav__link" href="about.html">About</a>
-          <a class="nav__link is-active" href="contact.html">Contact</a>
-          <a class="btn btn--small" href="tel:6135618075">Call Now</a>
-        </nav>
-      </div>
+      <a class="btn btn--small" href="tel:6135618075">Call Now</a>
     </div>
   </header>
 
-  <main id="main" class="page">
-    <section class="page-hero">
-      <div class="container">
-        <h1>Contact</h1>
-        <p class="lead">Call, email, or send a quote request (static prototype form).</p>
+  <div class="navwrap">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="brand__logo">DV</span>
+        <span class="brand__text">
+          <span class="brand__name">Dan Vokey Plumbing</span>
+          <span class="brand__sub">Kingston, ON</span>
+        </span>
+      </a>
+
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle>☰</button>
+
+      <nav class="nav__links" data-nav>
+        <a class="nav__link" href="index.html">Home</a>
+        <a class="nav__link" href="services.html">Services</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link is-active" href="contact.html">Contact</a>
+        <a class="btn btn--small" href="tel:6135618075">Call Now</a>
+      </nav>
+    </div>
+  </div>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div>
+          <span class="pill">Contact</span>
+          <h1>Request a Quote</h1>
+          <p class="lead">Phase 1 static form — submits locally and shows a confirmation message.</p>
+        </div>
+
+        <aside class="card">
+          <h2 class="card__title">Direct Contact</h2>
+          <p class="card__text">Prefer to talk? Call or email.</p>
+          <div class="card__row"><span class="muted">Phone</span><strong>(613) 561-8075</strong></div>
+          <div class="card__row"><span class="muted">Email</span><strong>danvokeyplumbing@gmail.com</strong></div>
+        </aside>
       </div>
     </section>
 
     <section class="section">
-      <div class="container split">
-        <div class="card">
-          <h2 class="card__title">Direct contact</h2>
+      <div class="container">
+        <div class="grid grid--2">
+          <div class="card">
+            <h2 class="card__title">Quote Form</h2>
+            <p class="card__text">Tell us what’s going on and we’ll follow up.</p>
 
-          <div class="mini">
-            <div class="mini__label">Phone</div>
-            <div class="mini__value"><a href="tel:6135618075">(613) 561-8075</a></div>
-          </div>
+            <form id="quoteForm">
+              <div class="form__row">
+                <div>
+                  <label for="name">Name</label>
+                  <input id="name" name="name" type="text" placeholder="Your name" required />
+                </div>
+                <div>
+                  <label for="phone">Phone</label>
+                  <input id="phone" name="phone" type="tel" placeholder="(613) 555-1234" required />
+                </div>
+              </div>
 
-          <div class="mini">
-            <div class="mini__label">Email</div>
-            <div class="mini__value"><a href="mailto:danvokeyplumbing@gmail.com">danvokeyplumbing@gmail.com</a></div>
-          </div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
 
-          <div class="mini">
-            <div class="mini__label">Address</div>
-            <div class="mini__value">35 Terry Fox Dr #301, Kingston, ON K7M 8N4</div>
-          </div>
-
-          <div class="notice">
-            <strong>Phase 1 note:</strong> Quote form is demo only. In Phase 2, it can be wired to a database/email workflow.
-          </div>
-
-          <a class="btn btn--small" href="#quote">Jump to Quote Form</a>
-        </div>
-
-        <div class="card" id="quote">
-          <h2 class="card__title">Request a Quote</h2>
-          <p class="card__text">Tell us what’s going on and how you want to be contacted.</p>
-
-          <form class="form" id="quoteForm">
-            <label>
-              Full Name
-              <input type="text" name="name" required placeholder="Your name" />
-            </label>
-
-            <div class="form__row">
-              <label>
-                Phone
-                <input type="tel" name="phone" placeholder="(###) ###-####" />
-              </label>
-
-              <label>
-                Email
-                <input type="email" name="email" required placeholder="you@example.com" />
-              </label>
-            </div>
-
-            <label>
-              Preferred Contact Method
-              <select name="preferred" required>
-                <option value="" selected disabled>Select one</option>
-                <option>Email</option>
-                <option>Phone</option>
+              <label for="service">Service Type</label>
+              <select id="service" name="service" required>
+                <option value="">Select one…</option>
+                <option>Drain cleaning</option>
+                <option>Leak repair</option>
+                <option>Water heater</option>
+                <option>Fixture install</option>
+                <option>Other</option>
               </select>
-            </label>
 
-            <label>
-              Message
-              <textarea name="message" rows="5" required placeholder="Briefly describe the issue..."></textarea>
-            </label>
+              <label for="details">Details</label>
+              <textarea id="details" name="details" rows="5" placeholder="Describe the issue…" required></textarea>
 
-            <button class="btn btn--block" type="submit">Submit Request</button>
-            <p class="fineprint" id="formStatus" aria-live="polite"></p>
-          </form>
+              <div style="margin-top:14px;">
+                <button class="btn btn--block" type="submit">Submit Request</button>
+              </div>
+
+              <div id="formStatus" class="notice" aria-live="polite">
+                After submitting, you’ll see a demo confirmation message.
+              </div>
+            </form>
+          </div>
+
+          <div class="card">
+            <h2 class="card__title">Hours & Notes</h2>
+            <p class="card__text">This section is static for Phase 1 and can be updated later.</p>
+
+            <div class="card__row"><span class="muted">Mon–Fri</span><strong>8:00 AM – 6:00 PM</strong></div>
+            <div class="card__row"><span class="muted">Sat</span><strong>9:00 AM – 3:00 PM</strong></div>
+            <div class="card__row"><span class="muted">Sun</span><strong>Closed</strong></div>
+
+            <p class="fineprint">Emergency service messaging can be added in Phase 2.</p>
+            <a class="btn btn--ghost btn--block" href="tel:6135618075">Call Now</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
+  <footer>
     <div class="container footer__grid">
       <div>
-        <div class="brand brand--footer">
-          <span class="brand__logo" aria-hidden="true">DV</span>
-          <span class="brand__text">
-            <span class="brand__name">Dan Vokey’s Plumbing</span>
-            <span class="brand__sub">Kingston, ON</span>
-          </span>
-        </div>
-        <p class="muted">Static redesign prototype (Phase 1).</p>
+        <h3 class="footer__title">Dan Vokey Plumbing</h3>
+        <p class="muted">Static prototype page.</p>
       </div>
 
       <div>
-        <h3 class="footer__title">Contact</h3>
-        <p><a href="tel:6135618075">(613) 561-8075</a><br />
-           <a href="mailto:danvokeyplumbing@gmail.com">danvokeyplumbing@gmail.com</a><br />
-           35 Terry Fox Dr #301, Kingston, ON K7M 8N4
-        </p>
-      </div>
-
-      <div>
-        <h3 class="footer__title">Links</h3>
-        <p class="footer__links">
+        <h4 class="footer__title">Links</h4>
+        <div class="footer__links">
           <a href="index.html">Home</a>
           <a href="services.html">Services</a>
           <a href="about.html">About</a>
-        </p>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="footer__title">Contact</h4>
+        <div class="footer__links">
+          <a href="tel:6135618075">(613) 561-8075</a>
+          <a href="mailto:danvokeyplumbing@gmail.com">danvokeyplumbing@gmail.com</a>
+        </div>
       </div>
     </div>
 
     <div class="container footer__bottom">
-      <p>© <span id="year"></span> Dan Vokey’s Plumbing Services</p>
+      © <span id="year"></span> Dan Vokey Plumbing
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
